@@ -1,6 +1,6 @@
 # DMIT2015 Fall 2022 assignments
 
-## your name here
+## Kim Joshua Barrameda
 
 ## your Github Account id
 
