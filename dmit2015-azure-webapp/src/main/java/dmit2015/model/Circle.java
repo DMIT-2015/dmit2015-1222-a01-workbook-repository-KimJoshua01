@@ -38,4 +38,15 @@ public class Circle {
     {
         return 2 * Math.PI * radius;
     }
+
+     public static void main(String[] args)
+    {
+        Circle circle1 = new Circle();
+
+        System.out.printf("The radius of circle is %s\n", circle1.getRadius());
+        System.out.printf("The area of circle is % .2f\n", circle1.Area());
+        System.out.printf("The perimeter of circle is %.2f\n", circle1.Perimeter());
+
+        circle1.setRadius(5);
+    }
 }
