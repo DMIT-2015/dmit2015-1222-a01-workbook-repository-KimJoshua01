@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ca.nait.dmit</groupId>
-    <artifactId>dmit2015-azure-webapp</artifactId>
+    <artifactId>demo2</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>dmit2015-azure-webapp</name>
+    <name>demo2</name>
     <packaging>war</packaging>
 
     <properties>
@@ -36,17 +36,21 @@
             <artifactId>core</artifactId>
             <version>3.5.1</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.google.zxing/javase -->
+        <!-- mvn wildfly-jar:dev-watch -->
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>javase</artifactId>
             <version>3.5.1</version>
         </dependency>
+
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
             <version>2.0.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -66,12 +70,12 @@
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-suite-engine</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -105,7 +109,8 @@
                 <artifactId>wildfly-jar-maven-plugin</artifactId>
                 <version>8.1.0.Final</version>
                 <configuration>
-                    <feature-pack-location>wildfly-preview@maven(org.jboss.universe:community-universe)#27.0.1.Final</feature-pack-location>
+                    <feature-pack-location>wildfly-preview@maven(org.jboss.universe:community-universe)#27.0.1.Final
+                    </feature-pack-location>
                     <layers>
                         <!-- https://docs.wildfly.org/27/Bootable_Guide.html#wildfly_layers -->
                         <layer>web-server</layer>
@@ -135,7 +140,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 </project>

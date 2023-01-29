@@ -3,7 +3,6 @@
 <%--
 Add to pom.xml the following the Maven dependencies to rid of the runtime errors with JSTL:
   The absolute uri: [http://java.sun.com/jsp/jstl/core] cannot be resolved in either web.xml or the jar files deployed with this application
-
 <dependency>
     <groupId>org.glassfish.web</groupId>
     <artifactId>jakarta.servlet.jsp.jstl</artifactId>
@@ -45,9 +44,8 @@ Add to pom.xml the following the Maven dependencies to rid of the runtime errors
         <div class="form-group">
             <label for="radius">Text Value</label>
             <input type="text" class="form-control" id="radius"
-                   name="textValue" value="${formBean.radius}"/>
+                   name="radius" value="${formBean.radius}"/>
         </div>
-
 
         <button type="submit" class="btn btn-primary">Submit</button>
 
@@ -55,9 +53,7 @@ Add to pom.xml the following the Maven dependencies to rid of the runtime errors
 
     <c:if test="${pageContext.request.method == 'POST'}">
         <b>Radius:</b>    ${formBean.radius} <br/>
-        <b>Area:</b> ${formBean.area()} <br/>
-        <b>Diameter:</b> ${formBean.diameter()} <br/>
-        <b>Circumference:</b> ${formBean.circumference()} <br/>
+        <b>Area:</b>    ${formBean.area()} <br/>
 
     </c:if>
 
