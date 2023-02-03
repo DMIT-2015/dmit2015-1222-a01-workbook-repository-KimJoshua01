@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.omnifaces.util.Messages;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -49,6 +50,11 @@ public class FacesDemoFormController {
     @Getter @Setter
     private boolean checkbox;
 
+    // Date form field
+    @Getter @Setter
+    private LocalDate dateValue = LocalDate.now();
+
+
     public String submit() {
         Messages.addGlobalInfo("Text value is {0}", textValue);
         Messages.addGlobalInfo("Number value is {0}", numberValue);
@@ -58,6 +64,7 @@ public class FacesDemoFormController {
         Messages.addGlobalInfo("Radio value is {0}", radioValue);
         Messages.addGlobalInfo("Textarea value is {0}", textareaValue);
         Messages.addGlobalInfo("Checked Boolean is {0}", checkbox);
+        Messages.addGlobalInfo("Date value is {0}", dateValue.toString());
 
         return "";
     }

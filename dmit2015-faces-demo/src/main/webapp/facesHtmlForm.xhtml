@@ -97,6 +97,18 @@
             </div>
 
             <div class="field col-12 md:col-2">
+               <p:outputLabel for="dateValue" >Date Value</p:outputLabel>
+               <p:datePicker id="dateValue"
+                             value="#{currentFacesDemoFormController.dateValue}"
+                             pattern="yyyy-MM-dd"
+                             showIcon="true"
+                             showButtonBar="true"
+                             class="inputfield w-full"
+               >
+               </p:datePicker>
+            </div>
+
+            <div class="field col-12 md:col-2">
                <p:commandButton value="Submit"
                                 action="#{currentFacesDemoFormController.submit}"
                                 update=":messages "
